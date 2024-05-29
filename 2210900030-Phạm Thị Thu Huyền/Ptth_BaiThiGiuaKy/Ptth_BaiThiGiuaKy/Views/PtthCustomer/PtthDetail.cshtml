@@ -1,0 +1,67 @@
+﻿@model Ptth_BaiThiGiuaKy.Models.PtthCustormer
+
+@{
+    ViewBag.Title = "PtthDetail: Xem thông tin chi tiết khách hàng";
+}
+
+<h2>PtthDetail- Xem thông tin chi tiết khách hàng</h2>
+
+<div>
+    <h4>PtthCustormer</h4>
+
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Ptth_2210900030_CustId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ptth_2210900030_CustId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ptth_FullName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ptth_FullName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ptth_Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ptth_Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ptth_Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ptth_Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ptth_Phone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ptth_Phone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Ptth_Balance)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ptth_Balance)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
