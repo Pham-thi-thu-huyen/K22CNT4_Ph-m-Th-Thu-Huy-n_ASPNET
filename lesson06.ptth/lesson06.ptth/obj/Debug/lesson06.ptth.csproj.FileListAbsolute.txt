@@ -51,6 +51,8 @@ D:\ASPNET\K22CNT4_Ph-m-Th-Thu-Huy-n_ASPNET\lesson06.ptth\lesson06.ptth\bin\rosly
 D:\ASPNET\K22CNT4_Ph-m-Th-Thu-Huy-n_ASPNET\lesson06.ptth\lesson06.ptth\bin\roslyn\VBCSCompiler.exe
 D:\ASPNET\K22CNT4_Ph-m-Th-Thu-Huy-n_ASPNET\lesson06.ptth\lesson06.ptth\bin\roslyn\VBCSCompiler.exe.config
 D:\ASPNET\K22CNT4_Ph-m-Th-Thu-Huy-n_ASPNET\lesson06.ptth\lesson06.ptth\bin\Antlr3.Runtime.dll
+D:\ASPNET\K22CNT4_Ph-m-Th-Thu-Huy-n_ASPNET\lesson06.ptth\lesson06.ptth\bin\EntityFramework.dll
+D:\ASPNET\K22CNT4_Ph-m-Th-Thu-Huy-n_ASPNET\lesson06.ptth\lesson06.ptth\bin\EntityFramework.SqlServer.dll
 D:\ASPNET\K22CNT4_Ph-m-Th-Thu-Huy-n_ASPNET\lesson06.ptth\lesson06.ptth\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 D:\ASPNET\K22CNT4_Ph-m-Th-Thu-Huy-n_ASPNET\lesson06.ptth\lesson06.ptth\bin\Microsoft.Web.Infrastructure.dll
 D:\ASPNET\K22CNT4_Ph-m-Th-Thu-Huy-n_ASPNET\lesson06.ptth\lesson06.ptth\bin\Newtonsoft.Json.dll
@@ -62,6 +64,8 @@ D:\ASPNET\K22CNT4_Ph-m-Th-Thu-Huy-n_ASPNET\lesson06.ptth\lesson06.ptth\bin\Syste
 D:\ASPNET\K22CNT4_Ph-m-Th-Thu-Huy-n_ASPNET\lesson06.ptth\lesson06.ptth\bin\System.Web.WebPages.dll
 D:\ASPNET\K22CNT4_Ph-m-Th-Thu-Huy-n_ASPNET\lesson06.ptth\lesson06.ptth\bin\System.Web.WebPages.Razor.dll
 D:\ASPNET\K22CNT4_Ph-m-Th-Thu-Huy-n_ASPNET\lesson06.ptth\lesson06.ptth\bin\WebGrease.dll
+D:\ASPNET\K22CNT4_Ph-m-Th-Thu-Huy-n_ASPNET\lesson06.ptth\lesson06.ptth\bin\EntityFramework.xml
+D:\ASPNET\K22CNT4_Ph-m-Th-Thu-Huy-n_ASPNET\lesson06.ptth\lesson06.ptth\bin\EntityFramework.SqlServer.xml
 D:\ASPNET\K22CNT4_Ph-m-Th-Thu-Huy-n_ASPNET\lesson06.ptth\lesson06.ptth\bin\System.Web.Helpers.xml
 D:\ASPNET\K22CNT4_Ph-m-Th-Thu-Huy-n_ASPNET\lesson06.ptth\lesson06.ptth\bin\System.Web.Mvc.xml
 D:\ASPNET\K22CNT4_Ph-m-Th-Thu-Huy-n_ASPNET\lesson06.ptth\lesson06.ptth\bin\System.Web.Optimization.xml
@@ -72,8 +76,8 @@ D:\ASPNET\K22CNT4_Ph-m-Th-Thu-Huy-n_ASPNET\lesson06.ptth\lesson06.ptth\bin\Syste
 D:\ASPNET\K22CNT4_Ph-m-Th-Thu-Huy-n_ASPNET\lesson06.ptth\lesson06.ptth\bin\Newtonsoft.Json.xml
 D:\ASPNET\K22CNT4_Ph-m-Th-Thu-Huy-n_ASPNET\lesson06.ptth\lesson06.ptth\bin\Antlr3.Runtime.pdb
 D:\ASPNET\K22CNT4_Ph-m-Th-Thu-Huy-n_ASPNET\lesson06.ptth\lesson06.ptth\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\ASPNET\K22CNT4_Ph-m-Th-Thu-Huy-n_ASPNET\lesson06.ptth\lesson06.ptth\obj\Debug\lesson06.ptth.csproj.AssemblyReference.cache
 D:\ASPNET\K22CNT4_Ph-m-Th-Thu-Huy-n_ASPNET\lesson06.ptth\lesson06.ptth\obj\Debug\lesson06.ptth.csproj.CoreCompileInputs.cache
 D:\ASPNET\K22CNT4_Ph-m-Th-Thu-Huy-n_ASPNET\lesson06.ptth\lesson06.ptth\obj\Debug\lesson06.ptth.csproj.CopyComplete
 D:\ASPNET\K22CNT4_Ph-m-Th-Thu-Huy-n_ASPNET\lesson06.ptth\lesson06.ptth\obj\Debug\lesson06.ptth.dll
 D:\ASPNET\K22CNT4_Ph-m-Th-Thu-Huy-n_ASPNET\lesson06.ptth\lesson06.ptth\obj\Debug\lesson06.ptth.pdb
+D:\ASPNET\K22CNT4_Ph-m-Th-Thu-Huy-n_ASPNET\lesson06.ptth\lesson06.ptth\obj\Debug\lesson06.ptth.csproj.AssemblyReference.cache
