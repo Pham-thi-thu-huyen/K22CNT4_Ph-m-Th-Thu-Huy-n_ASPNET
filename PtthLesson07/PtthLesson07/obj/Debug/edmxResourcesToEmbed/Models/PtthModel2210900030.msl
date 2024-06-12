@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PtthK22CNT4Lesson07DbModelStoreContainer" CdmEntityContainer="PtthK22CNT4Lesson07DbEntities">
+    <EntitySetMapping Name="PtthKhoas">
+      <EntityTypeMapping TypeName="PtthK22CNT4Lesson07DbModel.PtthKhoa">
+        <MappingFragment StoreEntitySet="PtthKhoa">
+          <ScalarProperty Name="PtthMaKH" ColumnName="PtthMaKH" />
+          <ScalarProperty Name="PtthTenKh" ColumnName="PtthTenKh" />
+          <ScalarProperty Name="PtthTrangthai" ColumnName="PtthTrangthai" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PtthSinhViens">
+      <EntityTypeMapping TypeName="PtthK22CNT4Lesson07DbModel.PtthSinhVien">
+        <MappingFragment StoreEntitySet="PtthSinhVien">
+          <ScalarProperty Name="PtthMaSV" ColumnName="PtthMaSV" />
+          <ScalarProperty Name="PtthHoSV" ColumnName="PtthHoSV" />
+          <ScalarProperty Name="PtthTenSV" ColumnName="PtthTenSV" />
+          <ScalarProperty Name="PtthPhai" ColumnName="PtthPhai" />
+          <ScalarProperty Name="PtthEmail" ColumnName="PtthEmail" />
+          <ScalarProperty Name="PtthPhone" ColumnName="PtthPhone" />
+          <ScalarProperty Name="PtthMaKH" ColumnName="PtthMaKH" />
+          <ScalarProperty Name="PtthTrangthai" ColumnName="PtthTrangthai" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,34 @@
+﻿@model PtthLesson07.Models.PtthKhoa
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PtthKhoa</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PtthTenKh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PtthTenKh)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PtthTrangthai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PtthTrangthai)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PtthMaKH }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
