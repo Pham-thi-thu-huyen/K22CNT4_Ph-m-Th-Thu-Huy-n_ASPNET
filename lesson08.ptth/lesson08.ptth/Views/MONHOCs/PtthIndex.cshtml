@@ -1,0 +1,39 @@
+﻿@model IEnumerable<lesson08.ptth.Models.MONHOC>
+
+@{
+    ViewBag.Title = "PtthIndex";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "PtthCreate")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PtthTenMH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PtthSoTiet)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PtthTenMH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PtthSoTiet)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "PtthEdit", new { id=item.PtthMaMH.Trim() }) |
+            @Html.ActionLink("Details", "PtthDetails", new { id=item.PtthMaMH.Trim() }) |
+            @Html.ActionLink("Delete", "PtthDelete", new { id=item.PtthMaMH.Trim() })
+        </td>
+    </tr>
+}
+
+</table>

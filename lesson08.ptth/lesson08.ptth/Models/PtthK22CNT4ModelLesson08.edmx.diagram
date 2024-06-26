@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="4fb645dded264319bb0f3bcf829fce97" Name="Diagram1">
+        <EntityTypeShape EntityType="PtthK22CNT4qlSinhVienModel.KHOA" Width="1.5" PointX="6.375" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PtthK22CNT4qlSinhVienModel.MONHOC" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="PtthK22CNT4qlSinhVienModel.SINHVIEN" Width="1.5" PointX="1.125" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="PtthK22CNT4qlSinhVienModel.KETQUA" Width="1.5" PointX="7.125" PointY="0.875" IsExpanded="true" />
+        <AssociationConnector Association="PtthK22CNT4qlSinhVienModel.FK_KETQUA_MONHOC" ManuallyRouted="false" />
+        <AssociationConnector Association="PtthK22CNT4qlSinhVienModel.FK_KETQUA_SINHVIEN" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

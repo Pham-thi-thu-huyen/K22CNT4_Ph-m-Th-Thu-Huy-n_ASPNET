@@ -1,0 +1,75 @@
+﻿@model IEnumerable<lesson08.ptth.Models.SINHVIEN>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PtthHoSV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PtthTenSV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PtthPhai)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PtthNgaySinh)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PtthNoiSinh)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PtthMaKH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PtthHocBong)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PtthDiemTrungBinh)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PtthHoSV)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PtthTenSV)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PtthPhai)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PtthNgaySinh)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PtthNoiSinh)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PtthMaKH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PtthHocBong)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PtthDiemTrungBinh)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "PtthEdit", new { id=item.PtthMaSV.Trim() }) |
+            @Html.ActionLink("Details", "PtthDetails", new { id=item.PtthMaSV.Trim()}) |
+            @Html.ActionLink("Delete", "PtthDelete", new { id=item.PtthMaSV.Trim() })
+        </td>
+    </tr>
+}
+
+</table>

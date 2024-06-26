@@ -1,0 +1,33 @@
+﻿@model IEnumerable<lesson08.ptth.Models.KHOA>
+
+@{
+    ViewBag.Title = "PtthIndex";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "PtthCreate")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PtthTenKH)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PtthTenKH)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PtthMaKH.Trim() }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PtthMaKH.Trim() }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PtthMaKH.Trim() })
+        </td>
+    </tr>
+}
+
+</table>

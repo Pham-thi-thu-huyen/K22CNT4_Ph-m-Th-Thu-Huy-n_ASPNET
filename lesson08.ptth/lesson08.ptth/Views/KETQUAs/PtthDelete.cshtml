@@ -1,0 +1,48 @@
+﻿@model lesson08.ptth.Models.KETQUA
+
+@{
+    ViewBag.Title = "PtthDelete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>KETQUA</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PtthDiem)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PtthDiem)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MONHOC.PtthTenMH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MONHOC.PtthTenMH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SINHVIEN.PtthHoSV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SINHVIEN.PtthHoSV)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="PtthDelete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "PtthIndex")
+        </div>
+    }
+</div>

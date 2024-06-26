@@ -1,0 +1,82 @@
+﻿@model lesson08.ptth.Models.SINHVIEN
+
+@{
+    ViewBag.Title = "PtthDetails";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>SINHVIEN</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PtthHoSV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PtthHoSV)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PtthTenSV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PtthTenSV)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PtthPhai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PtthPhai)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PtthNgaySinh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PtthNgaySinh)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PtthNoiSinh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PtthNoiSinh)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PtthMaKH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PtthMaKH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PtthHocBong)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PtthHocBong)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PtthDiemTrungBinh)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PtthDiemTrungBinh)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("PtthEdit", "PtthEdit", new { id = Model.PtthMaSV }) |
+    @Html.ActionLink("Back to List", "PtthIndex")
+</p>

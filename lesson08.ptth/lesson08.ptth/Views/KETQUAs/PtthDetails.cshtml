@@ -1,0 +1,42 @@
+﻿@model lesson08.ptth.Models.KETQUA
+
+@{
+    ViewBag.Title = "PtthDetails";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>KETQUA</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PtthDiem)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PtthDiem)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MONHOC.PtthTenMH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MONHOC.PtthTenMH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SINHVIEN.PtthHoSV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SINHVIEN.PtthHoSV)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("PtthEdit", "PtthEdit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "PtthIndex")
+</p>

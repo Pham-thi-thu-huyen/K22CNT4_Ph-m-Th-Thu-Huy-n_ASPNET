@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="PtthK22CNT4qlSinhVienModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'PtthK22CNT4qlSinhVien.dbo.KETQUA' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="KETQUA">
+          <Key>
+            <PropertyRef Name="PtthMaSV" />
+            <PropertyRef Name="PtthMaMH" />
+          </Key>
+          <Property Name="PtthMaSV" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="PtthMaMH" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="PtthDiem" Type="decimal" Precision="18" Scale="0" />
+        </EntityType>
+        <EntityType Name="KHOA">
+          <Key>
+            <PropertyRef Name="PtthMaKH" />
+          </Key>
+          <Property Name="PtthMaKH" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="PtthTenKH" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="MONHOC">
+          <Key>
+            <PropertyRef Name="PtthMaMH" />
+          </Key>
+          <Property Name="PtthMaMH" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="PtthTenMH" Type="nvarchar" MaxLength="50" />
+          <Property Name="PtthSoTiet" Type="nchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="SINHVIEN">
+          <Key>
+            <PropertyRef Name="PtthMaSV" />
+          </Key>
+          <Property Name="PtthMaSV" Type="nchar" MaxLength="10" Nullable="false" />
+          <Property Name="PtthHoSV" Type="nvarchar" MaxLength="50" />
+          <Property Name="PtthTenSV" Type="nvarchar" MaxLength="50" />
+          <Property Name="PtthPhai" Type="bit" />
+          <Property Name="PtthNgaySinh" Type="date" />
+          <Property Name="PtthNoiSinh" Type="nvarchar" MaxLength="50" />
+          <Property Name="PtthMaKH" Type="nchar" MaxLength="10" />
+          <Property Name="PtthHocBong" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="PtthDiemTrungBinh" Type="decimal" Precision="18" Scale="0" />
+        </EntityType>
+        <Association Name="FK_KETQUA_MONHOC">
+          <End Role="MONHOC" Type="Self.MONHOC" Multiplicity="1" />
+          <End Role="KETQUA" Type="Self.KETQUA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MONHOC">
+              <PropertyRef Name="PtthMaMH" />
+            </Principal>
+            <Dependent Role="KETQUA">
+              <PropertyRef Name="PtthMaMH" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_KETQUA_SINHVIEN">
+          <End Role="SINHVIEN" Type="Self.SINHVIEN" Multiplicity="1" />
+          <End Role="KETQUA" Type="Self.KETQUA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SINHVIEN">
+              <PropertyRef Name="PtthMaSV" />
+            </Principal>
+            <Dependent Role="KETQUA">
+              <PropertyRef Name="PtthMaSV" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="PtthK22CNT4qlSinhVienModelStoreContainer">
+          <EntitySet Name="KHOA" EntityType="Self.KHOA" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MONHOC" EntityType="Self.MONHOC" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SINHVIEN" EntityType="Self.SINHVIEN" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="KETQUA" EntityType="Self.KETQUA" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [KETQUA].[PtthMaSV] AS [PtthMaSV], 
+    [KETQUA].[PtthMaMH] AS [PtthMaMH], 
+    [KETQUA].[PtthDiem] AS [PtthDiem]
+    FROM [dbo].[KETQUA] AS [KETQUA]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_KETQUA_MONHOC" Association="Self.FK_KETQUA_MONHOC">
+            <End Role="MONHOC" EntitySet="MONHOC" />
+            <End Role="KETQUA" EntitySet="KETQUA" />
+          </AssociationSet>
+          <AssociationSet Name="FK_KETQUA_SINHVIEN" Association="Self.FK_KETQUA_SINHVIEN">
+            <End Role="SINHVIEN" EntitySet="SINHVIEN" />
+            <End Role="KETQUA" EntitySet="KETQUA" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PtthK22CNT4qlSinhVienModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="KHOA">
+          <Key>
+            <PropertyRef Name="PtthMaKH" />
+          </Key>
+          <Property Name="PtthMaKH" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="PtthTenKH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="MONHOC">
+          <Key>
+            <PropertyRef Name="PtthMaMH" />
+          </Key>
+          <Property Name="PtthMaMH" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="PtthTenMH" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PtthSoTiet" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <NavigationProperty Name="KETQUAs" Relationship="Self.FK_KETQUA_MONHOC" FromRole="MONHOC" ToRole="KETQUA" />
+        </EntityType>
+        <EntityType Name="SINHVIEN">
+          <Key>
+            <PropertyRef Name="PtthMaSV" />
+          </Key>
+          <Property Name="PtthMaSV" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="PtthHoSV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PtthTenSV" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PtthPhai" Type="Boolean" />
+          <Property Name="PtthNgaySinh" Type="DateTime" Precision="0" />
+          <Property Name="PtthNoiSinh" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PtthMaKH" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="PtthHocBong" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="PtthDiemTrungBinh" Type="Decimal" Precision="18" Scale="0" />
+          <NavigationProperty Name="KETQUAs" Relationship="Self.FK_KETQUA_SINHVIEN" FromRole="SINHVIEN" ToRole="KETQUA" />
+        </EntityType>
+        <EntityType Name="KETQUA">
+          <Key>
+            <PropertyRef Name="PtthMaSV" />
+            <PropertyRef Name="PtthMaMH" />
+          </Key>
+          <Property Name="PtthMaSV" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="PtthMaMH" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="PtthDiem" Type="Decimal" Precision="18" Scale="0" />
+          <NavigationProperty Name="MONHOC" Relationship="Self.FK_KETQUA_MONHOC" FromRole="KETQUA" ToRole="MONHOC" />
+          <NavigationProperty Name="SINHVIEN" Relationship="Self.FK_KETQUA_SINHVIEN" FromRole="KETQUA" ToRole="SINHVIEN" />
+        </EntityType>
+        <Association Name="FK_KETQUA_MONHOC">
+          <End Role="MONHOC" Type="Self.MONHOC" Multiplicity="1" />
+          <End Role="KETQUA" Type="Self.KETQUA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="MONHOC">
+              <PropertyRef Name="PtthMaMH" />
+            </Principal>
+            <Dependent Role="KETQUA">
+              <PropertyRef Name="PtthMaMH" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_KETQUA_SINHVIEN">
+          <End Role="SINHVIEN" Type="Self.SINHVIEN" Multiplicity="1" />
+          <End Role="KETQUA" Type="Self.KETQUA" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="SINHVIEN">
+              <PropertyRef Name="PtthMaSV" />
+            </Principal>
+            <Dependent Role="KETQUA">
+              <PropertyRef Name="PtthMaSV" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="PtthK22CNT4qlSinhVienEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="KHOAs" EntityType="Self.KHOA" />
+          <EntitySet Name="MONHOCs" EntityType="Self.MONHOC" />
+          <EntitySet Name="SINHVIENs" EntityType="Self.SINHVIEN" />
+          <EntitySet Name="KETQUAs" EntityType="Self.KETQUA" />
+          <AssociationSet Name="FK_KETQUA_MONHOC" Association="Self.FK_KETQUA_MONHOC">
+            <End Role="MONHOC" EntitySet="MONHOCs" />
+            <End Role="KETQUA" EntitySet="KETQUAs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_KETQUA_SINHVIEN" Association="Self.FK_KETQUA_SINHVIEN">
+            <End Role="SINHVIEN" EntitySet="SINHVIENs" />
+            <End Role="KETQUA" EntitySet="KETQUAs" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="PtthK22CNT4qlSinhVienModelStoreContainer" CdmEntityContainer="PtthK22CNT4qlSinhVienEntities1">
+          <EntitySetMapping Name="KHOAs">
+            <EntityTypeMapping TypeName="PtthK22CNT4qlSinhVienModel.KHOA">
+              <MappingFragment StoreEntitySet="KHOA">
+                <ScalarProperty Name="PtthMaKH" ColumnName="PtthMaKH" />
+                <ScalarProperty Name="PtthTenKH" ColumnName="PtthTenKH" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MONHOCs">
+            <EntityTypeMapping TypeName="PtthK22CNT4qlSinhVienModel.MONHOC">
+              <MappingFragment StoreEntitySet="MONHOC">
+                <ScalarProperty Name="PtthMaMH" ColumnName="PtthMaMH" />
+                <ScalarProperty Name="PtthTenMH" ColumnName="PtthTenMH" />
+                <ScalarProperty Name="PtthSoTiet" ColumnName="PtthSoTiet" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SINHVIENs">
+            <EntityTypeMapping TypeName="PtthK22CNT4qlSinhVienModel.SINHVIEN">
+              <MappingFragment StoreEntitySet="SINHVIEN">
+                <ScalarProperty Name="PtthMaSV" ColumnName="PtthMaSV" />
+                <ScalarProperty Name="PtthHoSV" ColumnName="PtthHoSV" />
+                <ScalarProperty Name="PtthTenSV" ColumnName="PtthTenSV" />
+                <ScalarProperty Name="PtthPhai" ColumnName="PtthPhai" />
+                <ScalarProperty Name="PtthNgaySinh" ColumnName="PtthNgaySinh" />
+                <ScalarProperty Name="PtthNoiSinh" ColumnName="PtthNoiSinh" />
+                <ScalarProperty Name="PtthMaKH" ColumnName="PtthMaKH" />
+                <ScalarProperty Name="PtthHocBong" ColumnName="PtthHocBong" />
+                <ScalarProperty Name="PtthDiemTrungBinh" ColumnName="PtthDiemTrungBinh" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="KETQUAs">
+            <EntityTypeMapping TypeName="PtthK22CNT4qlSinhVienModel.KETQUA">
+              <MappingFragment StoreEntitySet="KETQUA">
+                <ScalarProperty Name="PtthMaSV" ColumnName="PtthMaSV" />
+                <ScalarProperty Name="PtthMaMH" ColumnName="PtthMaMH" />
+                <ScalarProperty Name="PtthDiem" ColumnName="PtthDiem" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
