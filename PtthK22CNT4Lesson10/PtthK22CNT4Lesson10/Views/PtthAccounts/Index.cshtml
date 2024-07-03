@@ -1,0 +1,64 @@
+﻿@model IEnumerable<PtthK22CNT4Lesson10.Models.PtthAccount>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_PtthLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PtthUserName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PtthPassword)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PtthFullName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PtthEmail)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PtthPhone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PtthActive)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PtthUserName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PtthPassword)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PtthFullName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PtthEmail)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PtthPhone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PtthActive)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PtthID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PtthID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PtthID })
+        </td>
+    </tr>
+}
+
+</table>

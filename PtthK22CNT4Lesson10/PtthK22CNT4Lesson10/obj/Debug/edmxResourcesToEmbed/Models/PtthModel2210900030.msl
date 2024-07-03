@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PtthK22CNT4Lesson10ModelStoreContainer" CdmEntityContainer="PtthK22CNT4Lesson10Entities">
+    <EntitySetMapping Name="PtthAccounts">
+      <EntityTypeMapping TypeName="PtthK22CNT4Lesson10Model.PtthAccount">
+        <MappingFragment StoreEntitySet="PtthAccount">
+          <ScalarProperty Name="PtthID" ColumnName="PtthID" />
+          <ScalarProperty Name="PtthUserName" ColumnName="PtthUserName" />
+          <ScalarProperty Name="PtthPassword" ColumnName="PtthPassword" />
+          <ScalarProperty Name="PtthFullName" ColumnName="PtthFullName" />
+          <ScalarProperty Name="PtthEmail" ColumnName="PtthEmail" />
+          <ScalarProperty Name="PtthPhone" ColumnName="PtthPhone" />
+          <ScalarProperty Name="PtthActive" ColumnName="PtthActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

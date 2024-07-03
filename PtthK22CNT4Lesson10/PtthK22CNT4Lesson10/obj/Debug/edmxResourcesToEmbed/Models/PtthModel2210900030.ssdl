@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PtthK22CNT4Lesson10Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="PtthAccount">
+    <Key>
+      <PropertyRef Name="PtthID" />
+    </Key>
+    <Property Name="PtthID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PtthUserName" Type="nvarchar" MaxLength="50" />
+    <Property Name="PtthPassword" Type="nvarchar" MaxLength="50" />
+    <Property Name="PtthFullName" Type="nvarchar" MaxLength="50" />
+    <Property Name="PtthEmail" Type="nvarchar" MaxLength="50" />
+    <Property Name="PtthPhone" Type="nvarchar" MaxLength="50" />
+    <Property Name="PtthActive" Type="bit" />
+  </EntityType>
+  <EntityContainer Name="PtthK22CNT4Lesson10ModelStoreContainer">
+    <EntitySet Name="PtthAccount" EntityType="Self.PtthAccount" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

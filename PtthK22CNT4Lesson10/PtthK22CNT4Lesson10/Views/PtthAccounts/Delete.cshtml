@@ -1,0 +1,73 @@
+﻿@model PtthK22CNT4Lesson10.Models.PtthAccount
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_PtthLayout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>PtthAccount</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PtthUserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PtthUserName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PtthPassword)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PtthPassword)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PtthFullName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PtthFullName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PtthEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PtthEmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PtthPhone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PtthPhone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PtthActive)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PtthActive)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

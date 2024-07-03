@@ -216,8 +216,8 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_PtthLayout.cshtml" />
     <Content Include="Views\Home\PtthAbout.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\PtthContact.cshtml" />
+    <Content Include="Views\Home\PtthIndex.cshtml" />
     <Content Include="Views\KHOAs\PtthCreate.cshtml" />
     <Content Include="Views\KHOAs\PtthDelete.cshtml" />
     <Content Include="Views\KHOAs\PtthDetails.cshtml" />

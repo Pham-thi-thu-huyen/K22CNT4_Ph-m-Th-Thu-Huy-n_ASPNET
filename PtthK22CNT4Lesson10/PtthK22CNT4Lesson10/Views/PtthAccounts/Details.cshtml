@@ -1,0 +1,67 @@
+﻿@model PtthK22CNT4Lesson10.Models.PtthAccount
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_PtthLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PtthAccount</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PtthUserName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PtthUserName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PtthPassword)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PtthPassword)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PtthFullName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PtthFullName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PtthEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PtthEmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PtthPhone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PtthPhone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PtthActive)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PtthActive)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PtthID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

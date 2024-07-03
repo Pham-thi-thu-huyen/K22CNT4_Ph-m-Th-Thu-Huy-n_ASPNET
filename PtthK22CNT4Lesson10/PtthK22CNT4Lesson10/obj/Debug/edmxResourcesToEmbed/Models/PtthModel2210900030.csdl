@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PtthK22CNT4Lesson10Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="PtthAccount">
+    <Key>
+      <PropertyRef Name="PtthID" />
+    </Key>
+    <Property Name="PtthID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PtthUserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PtthPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PtthFullName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PtthEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PtthPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PtthActive" Type="Boolean" />
+  </EntityType>
+  <EntityContainer Name="PtthK22CNT4Lesson10Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="PtthAccounts" EntityType="Self.PtthAccount" />
+  </EntityContainer>
+</Schema>
