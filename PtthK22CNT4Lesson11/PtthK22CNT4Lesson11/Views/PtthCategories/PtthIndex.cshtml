@@ -1,40 +1,47 @@
 ﻿@model IEnumerable<PtthK22CNT4Lesson11.Models.PtthCategory>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Danh mục sản phẩm";
     Layout = "~/Views/Shared/_Ptth2210900030Layout.cshtml";
 }
 
-<h2>Index</h2>
+<h2>Danh mục sản phẩm </h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Create New", "PtthCreate")
 </p>
-<table class="table">
+<a href="/PtthCategories/Create" class=" btn btn-primary my-3">Thên mới</a>
+<table class="table table-bordered">
     <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PtthID)
+        </th>
         <th>
             @Html.DisplayNameFor(model => model.PtthCateName)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.PtthStatus)
         </th>
-        <th></th>
+        <th>Chức năng</th>
     </tr>
 
 @foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.PtthCateName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PtthStatus)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.PtthID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.PtthID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.PtthID })
-        </td>
-    </tr>
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.PtthID)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.PtthCateName)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.PtthStatus)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "PtthEdit", new { id = item.PtthID }) |
+        @Html.ActionLink("Details", "PtthDetails", new { id = item.PtthID }) |
+        @Html.ActionLink("Delete", "PtthDelete", new { id = item.PtthID })
+    </td>
+</tr>
 }
 
 </table>

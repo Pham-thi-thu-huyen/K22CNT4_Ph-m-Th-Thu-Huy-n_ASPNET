@@ -14,6 +14,7 @@ namespace PtthK22CNT4Lesson11.Models
     
     public partial class PtthCategory
     {
+      
         public int PtthID { get; set; }
         public string PtthCateName { get; set; }
         public Nullable<bool> PtthStatus { get; set; }

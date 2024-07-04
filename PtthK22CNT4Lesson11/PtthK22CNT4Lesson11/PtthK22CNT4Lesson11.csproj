@@ -130,6 +130,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\PtthCategoriesController.cs" />
     <Compile Include="Controllers\PtthHomeController.cs" />
+    <Compile Include="Controllers\PtthProductsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -209,11 +210,16 @@
     <Content Include="Views\PtthHome\PtthAbout.cshtml" />
     <Content Include="Views\PtthHome\PtthContact.cshtml" />
     <Content Include="Views\PtthHome\PtthIndex.cshtml" />
-    <Content Include="Views\PtthCategories\Create.cshtml" />
-    <Content Include="Views\PtthCategories\Delete.cshtml" />
-    <Content Include="Views\PtthCategories\Details.cshtml" />
-    <Content Include="Views\PtthCategories\Edit.cshtml" />
-    <Content Include="Views\PtthCategories\Index.cshtml" />
+    <Content Include="Views\PtthCategories\PtthCreate.cshtml" />
+    <Content Include="Views\PtthCategories\PtthDelete.cshtml" />
+    <Content Include="Views\PtthCategories\PtthDetails.cshtml" />
+    <Content Include="Views\PtthCategories\PtthEdit.cshtml" />
+    <Content Include="Views\PtthCategories\PtthIndex.cshtml" />
+    <Content Include="Views\PtthProducts\PtthCreate.cshtml" />
+    <Content Include="Views\PtthProducts\PtthDelete.cshtml" />
+    <Content Include="Views\PtthProducts\PtthDetails.cshtml" />
+    <Content Include="Views\PtthProducts\PtthEdit.cshtml" />
+    <Content Include="Views\PtthProducts\PtthIndex.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

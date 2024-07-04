@@ -1,0 +1,65 @@
+﻿@model PtthK22CNT4Lesson11.Models.PtthProduct
+
+@{
+    ViewBag.Title = "PtthDelete";
+    Layout = "~/Views/Shared/_Ptth2210900030Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>PtthProduct</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PtthProName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PtthProName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PtthQty)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PtthQty)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PtthPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PtthPrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PtthCateId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PtthCateId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PtthActive)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PtthActive)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "PtthIndex")
+        </div>
+    }
+</div>

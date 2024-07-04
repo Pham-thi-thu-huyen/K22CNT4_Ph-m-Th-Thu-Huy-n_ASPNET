@@ -72,7 +72,6 @@ D:\ASPNET\K22CNT4_Ph-m-Th-Thu-Huy-n_ASPNET\PtthK22CNT4Lesson11\PtthK22CNT4Lesson
 D:\ASPNET\K22CNT4_Ph-m-Th-Thu-Huy-n_ASPNET\PtthK22CNT4Lesson11\PtthK22CNT4Lesson11\bin\Newtonsoft.Json.xml
 D:\ASPNET\K22CNT4_Ph-m-Th-Thu-Huy-n_ASPNET\PtthK22CNT4Lesson11\PtthK22CNT4Lesson11\bin\Antlr3.Runtime.pdb
 D:\ASPNET\K22CNT4_Ph-m-Th-Thu-Huy-n_ASPNET\PtthK22CNT4Lesson11\PtthK22CNT4Lesson11\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-D:\ASPNET\K22CNT4_Ph-m-Th-Thu-Huy-n_ASPNET\PtthK22CNT4Lesson11\PtthK22CNT4Lesson11\obj\Debug\PtthK22CNT4Lesson11.csproj.AssemblyReference.cache
 D:\ASPNET\K22CNT4_Ph-m-Th-Thu-Huy-n_ASPNET\PtthK22CNT4Lesson11\PtthK22CNT4Lesson11\obj\Debug\PtthK22CNT4Lesson11.csproj.CoreCompileInputs.cache
 D:\ASPNET\K22CNT4_Ph-m-Th-Thu-Huy-n_ASPNET\PtthK22CNT4Lesson11\PtthK22CNT4Lesson11\obj\Debug\PtthK22CNT4Lesson11.csproj.CopyComplete
 D:\ASPNET\K22CNT4_Ph-m-Th-Thu-Huy-n_ASPNET\PtthK22CNT4Lesson11\PtthK22CNT4Lesson11\obj\Debug\PtthK22CNT4Lesson11.dll
@@ -81,3 +80,4 @@ D:\ASPNET\K22CNT4_Ph-m-Th-Thu-Huy-n_ASPNET\PtthK22CNT4Lesson11\PtthK22CNT4Lesson
 D:\ASPNET\K22CNT4_Ph-m-Th-Thu-Huy-n_ASPNET\PtthK22CNT4Lesson11\PtthK22CNT4Lesson11\bin\EntityFramework.SqlServer.dll
 D:\ASPNET\K22CNT4_Ph-m-Th-Thu-Huy-n_ASPNET\PtthK22CNT4Lesson11\PtthK22CNT4Lesson11\bin\EntityFramework.xml
 D:\ASPNET\K22CNT4_Ph-m-Th-Thu-Huy-n_ASPNET\PtthK22CNT4Lesson11\PtthK22CNT4Lesson11\bin\EntityFramework.SqlServer.xml
+D:\ASPNET\K22CNT4_Ph-m-Th-Thu-Huy-n_ASPNET\PtthK22CNT4Lesson11\PtthK22CNT4Lesson11\obj\Debug\PtthK22CNT4Lesson11.csproj.AssemblyReference.cache

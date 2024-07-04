@@ -10,107 +10,107 @@ using PtthK22CNT4Lesson11.Models;
 
 namespace PtthK22CNT4Lesson11.Controllers
 {
-    public class PtthCategoriesController : Controller
+    public class PtthProductsController : Controller
     {
         private PtthK22CNT4Lesson11DbEntities db = new PtthK22CNT4Lesson11DbEntities();
 
-        // GET: PtthCategories
+        // GET: PtthProducts
         public ActionResult PtthIndex()
         {
-            return View(db.PtthCategories.ToList());
+            return View(db.PtthProducts.ToList());
         }
 
-        // GET: PtthCategories/Details/5
-        public ActionResult PtthDetails(int? id)
+        // GET: PtthProducts/Details/5
+        public ActionResult PtthDetails(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            PtthCategory ptthCategory = db.PtthCategories.Find(id);
-            if (ptthCategory == null)
+            PtthProduct ptthProduct = db.PtthProducts.Find(id);
+            if (ptthProduct == null)
             {
                 return HttpNotFound();
             }
-            return View(ptthCategory);
+            return View(ptthProduct);
         }
 
-        // GET: PtthCategories/Create
+        // GET: PtthProducts/Create
         public ActionResult PtthCreate()
         {
             return View();
         }
 
-        // POST: PtthCategories/Create
+        // POST: PtthProducts/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult PtthCreate([Bind(Include = "PtthID,PtthCateName,PtthStatus")] PtthCategory ptthCategory)
+        public ActionResult PtthCreate([Bind(Include = "Ptthid2210900030,PtthProName,PtthQty,PtthPrice,PtthCateId,PtthActive")] PtthProduct ptthProduct)
         {
             if (ModelState.IsValid)
             {
-                db.PtthCategories.Add(ptthCategory);
+                db.PtthProducts.Add(ptthProduct);
                 db.SaveChanges();
                 return RedirectToAction("PtthIndex");
             }
 
-            return View(ptthCategory);
+            return View(ptthProduct);
         }
 
-        // GET: PtthCategories/Edit/5
-        public ActionResult PtthEdit(int? id)
+        // GET: PtthProducts/Edit/5
+        public ActionResult PtthEdit(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            PtthCategory ptthCategory = db.PtthCategories.Find(id);
-            if (ptthCategory == null)
+            PtthProduct ptthProduct = db.PtthProducts.Find(id);
+            if (ptthProduct == null)
             {
                 return HttpNotFound();
             }
-            return View(ptthCategory);
+            return View(ptthProduct);
         }
 
-        // POST: PtthCategories/Edit/5
+        // POST: PtthProducts/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult PtthEdit([Bind(Include = "PtthID,PtthCateName,PtthStatus")] PtthCategory ptthCategory)
+        public ActionResult PtthEdit([Bind(Include = "Ptthid2210900030,PtthProName,PtthQty,PtthPrice,PtthCateId,PtthActive")] PtthProduct ptthProduct)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(ptthCategory).State = EntityState.Modified;
+                db.Entry(ptthProduct).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("PtthIndex");
             }
-            return View(ptthCategory);
+            return View(ptthProduct);
         }
 
-        // GET: PtthCategories/Delete/5
-        public ActionResult PtthDelete(int? id)
+        // GET: PtthProducts/Delete/5
+        public ActionResult PtthDelete(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            PtthCategory ptthCategory = db.PtthCategories.Find(id);
-            if (ptthCategory == null)
+            PtthProduct ptthProduct = db.PtthProducts.Find(id);
+            if (ptthProduct == null)
             {
                 return HttpNotFound();
             }
-            return View(ptthCategory);
+            return View(ptthProduct);
         }
 
-        // POST: PtthCategories/Delete/5
+        // POST: PtthProducts/Delete/5
         [HttpPost, ActionName("PtthDelete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(int id)
+        public ActionResult DeleteConfirmed(string id)
         {
-            PtthCategory ptthCategory = db.PtthCategories.Find(id);
-            db.PtthCategories.Remove(ptthCategory);
+            PtthProduct ptthProduct = db.PtthProducts.Find(id);
+            db.PtthProducts.Remove(ptthProduct);
             db.SaveChanges();
             return RedirectToAction("PtthIndex");
         }
