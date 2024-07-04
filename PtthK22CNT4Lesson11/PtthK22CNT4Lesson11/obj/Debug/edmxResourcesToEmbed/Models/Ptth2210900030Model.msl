@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PtthK22CNT4Lesson11DbModelStoreContainer" CdmEntityContainer="PtthK22CNT4Lesson11DbEntities">
+    <EntitySetMapping Name="PtthCategories">
+      <EntityTypeMapping TypeName="PtthK22CNT4Lesson11DbModel.PtthCategory">
+        <MappingFragment StoreEntitySet="PtthCategory">
+          <ScalarProperty Name="PtthID" ColumnName="PtthID" />
+          <ScalarProperty Name="PtthCateName" ColumnName="PtthCateName" />
+          <ScalarProperty Name="PtthStatus" ColumnName="PtthStatus" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PtthProducts">
+      <EntityTypeMapping TypeName="PtthK22CNT4Lesson11DbModel.PtthProduct">
+        <MappingFragment StoreEntitySet="PtthProduct">
+          <ScalarProperty Name="Ptthid2210900030" ColumnName="Ptthid2210900030" />
+          <ScalarProperty Name="PtthProName" ColumnName="PtthProName" />
+          <ScalarProperty Name="PtthQty" ColumnName="PtthQty" />
+          <ScalarProperty Name="PtthPrice" ColumnName="PtthPrice" />
+          <ScalarProperty Name="PtthCateId" ColumnName="PtthCateId" />
+          <ScalarProperty Name="PtthActive" ColumnName="PtthActive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,41 @@
+﻿@model PtthK22CNT4Lesson11.Models.PtthCategory
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Ptth2210900030Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>PtthCategory</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PtthCateName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PtthCateName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PtthStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PtthStatus)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

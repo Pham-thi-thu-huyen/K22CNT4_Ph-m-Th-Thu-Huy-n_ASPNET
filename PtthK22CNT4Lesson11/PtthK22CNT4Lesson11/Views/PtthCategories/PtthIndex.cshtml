@@ -1,0 +1,40 @@
+﻿@model IEnumerable<PtthK22CNT4Lesson11.Models.PtthCategory>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Ptth2210900030Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PtthCateName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PtthStatus)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PtthCateName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PtthStatus)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PtthID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PtthID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PtthID })
+        </td>
+    </tr>
+}
+
+</table>

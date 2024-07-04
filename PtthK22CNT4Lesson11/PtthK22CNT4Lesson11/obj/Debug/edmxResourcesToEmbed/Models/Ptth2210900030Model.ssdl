@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PtthK22CNT4Lesson11DbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="PtthCategory">
+    <Key>
+      <PropertyRef Name="PtthID" />
+    </Key>
+    <Property Name="PtthID" Type="int" Nullable="false" />
+    <Property Name="PtthCateName" Type="nvarchar" MaxLength="50" />
+    <Property Name="PtthStatus" Type="bit" />
+  </EntityType>
+  <EntityType Name="PtthProduct">
+    <Key>
+      <PropertyRef Name="Ptthid2210900030" />
+    </Key>
+    <Property Name="Ptthid2210900030" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="PtthProName" Type="nvarchar" MaxLength="50" />
+    <Property Name="PtthQty" Type="int" />
+    <Property Name="PtthPrice" Type="float" />
+    <Property Name="PtthCateId" Type="int" />
+    <Property Name="PtthActive" Type="bit" />
+  </EntityType>
+  <EntityContainer Name="PtthK22CNT4Lesson11DbModelStoreContainer">
+    <EntitySet Name="PtthCategory" EntityType="Self.PtthCategory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PtthProduct" EntityType="Self.PtthProduct" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

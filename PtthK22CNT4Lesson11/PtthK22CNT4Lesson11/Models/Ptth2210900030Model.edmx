@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="PtthK22CNT4Lesson11DbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="PtthCategory">
+          <Key>
+            <PropertyRef Name="PtthID" />
+          </Key>
+          <Property Name="PtthID" Type="int" Nullable="false" />
+          <Property Name="PtthCateName" Type="nvarchar" MaxLength="50" />
+          <Property Name="PtthStatus" Type="bit" />
+        </EntityType>
+        <EntityType Name="PtthProduct">
+          <Key>
+            <PropertyRef Name="Ptthid2210900030" />
+          </Key>
+          <Property Name="Ptthid2210900030" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="PtthProName" Type="nvarchar" MaxLength="50" />
+          <Property Name="PtthQty" Type="int" />
+          <Property Name="PtthPrice" Type="float" />
+          <Property Name="PtthCateId" Type="int" />
+          <Property Name="PtthActive" Type="bit" />
+        </EntityType>
+        <EntityContainer Name="PtthK22CNT4Lesson11DbModelStoreContainer">
+          <EntitySet Name="PtthCategory" EntityType="Self.PtthCategory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PtthProduct" EntityType="Self.PtthProduct" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PtthK22CNT4Lesson11DbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="PtthCategory">
+          <Key>
+            <PropertyRef Name="PtthID" />
+          </Key>
+          <Property Name="PtthID" Type="Int32" Nullable="false" />
+          <Property Name="PtthCateName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PtthStatus" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="PtthProduct">
+          <Key>
+            <PropertyRef Name="Ptthid2210900030" />
+          </Key>
+          <Property Name="Ptthid2210900030" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PtthProName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="PtthQty" Type="Int32" />
+          <Property Name="PtthPrice" Type="Double" />
+          <Property Name="PtthCateId" Type="Int32" />
+          <Property Name="PtthActive" Type="Boolean" />
+        </EntityType>
+        <EntityContainer Name="PtthK22CNT4Lesson11DbEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="PtthCategories" EntityType="Self.PtthCategory" />
+          <EntitySet Name="PtthProducts" EntityType="Self.PtthProduct" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="PtthK22CNT4Lesson11DbModelStoreContainer" CdmEntityContainer="PtthK22CNT4Lesson11DbEntities">
+          <EntitySetMapping Name="PtthCategories">
+            <EntityTypeMapping TypeName="PtthK22CNT4Lesson11DbModel.PtthCategory">
+              <MappingFragment StoreEntitySet="PtthCategory">
+                <ScalarProperty Name="PtthID" ColumnName="PtthID" />
+                <ScalarProperty Name="PtthCateName" ColumnName="PtthCateName" />
+                <ScalarProperty Name="PtthStatus" ColumnName="PtthStatus" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PtthProducts">
+            <EntityTypeMapping TypeName="PtthK22CNT4Lesson11DbModel.PtthProduct">
+              <MappingFragment StoreEntitySet="PtthProduct">
+                <ScalarProperty Name="Ptthid2210900030" ColumnName="Ptthid2210900030" />
+                <ScalarProperty Name="PtthProName" ColumnName="PtthProName" />
+                <ScalarProperty Name="PtthQty" ColumnName="PtthQty" />
+                <ScalarProperty Name="PtthPrice" ColumnName="PtthPrice" />
+                <ScalarProperty Name="PtthCateId" ColumnName="PtthCateId" />
+                <ScalarProperty Name="PtthActive" ColumnName="PtthActive" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

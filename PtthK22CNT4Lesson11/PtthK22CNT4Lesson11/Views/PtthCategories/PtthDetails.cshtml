@@ -1,0 +1,35 @@
+﻿@model PtthK22CNT4Lesson11.Models.PtthCategory
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Ptth2210900030Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PtthCategory</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PtthCateName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PtthCateName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PtthStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PtthStatus)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PtthID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
