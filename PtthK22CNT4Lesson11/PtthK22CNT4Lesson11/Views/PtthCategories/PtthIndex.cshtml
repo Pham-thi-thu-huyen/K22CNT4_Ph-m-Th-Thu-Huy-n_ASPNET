@@ -7,11 +7,12 @@
 
 <h2>Danh mục sản phẩm </h2>
 
-<p>
-    @Html.ActionLink("Create New", "PtthCreate")
+<p class="my-2">
+    @*@Html.ActionLink("Create New", "PtthCreate")*@
 </p>
-<a href="/PtthCategories/Create" class=" btn btn-primary my-3">Thên mới</a>
-<table class="table table-bordered">
+<a href="/PtthCategories/Create" class=" btn btn-primary ">Thên mới</a>
+</br>
+<table class="table table-bordered my-2">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.PtthID)
@@ -34,7 +35,15 @@
         @Html.DisplayFor(modelItem => item.PtthCateName)
     </td>
     <td>
-        @Html.DisplayFor(modelItem => item.PtthStatus)
+        @*Html.DisplayFor(modelItem => item.PtthStatus)*@
+        @if (item.PtthStatus == true)
+        {
+            <span style="color: lightgreen">Hoạt động</span>
+        }
+        else
+        {
+            <span style="color: red">Hem hoạt động</span>
+        }
     </td>
     <td>
         @Html.ActionLink("Edit", "PtthEdit", new { id = item.PtthID }) |

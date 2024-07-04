@@ -16,7 +16,7 @@ namespace PtthK22CNT4Lesson11
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "PtthHome", action = "PtthIndex", id = UrlParameter.Optional }
             );
         }
     }

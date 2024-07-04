@@ -1,16 +1,17 @@
 ﻿@model IEnumerable<PtthK22CNT4Lesson11.Models.PtthProduct>
 
 @{
-    ViewBag.Title = "PtthIndex";
+    ViewBag.Title = "Thêm mới danh mục";
     Layout = "~/Views/Shared/_Ptth2210900030Layout.cshtml";
 }
 
-<h2>Index</h2>
+<h2>Thêm mới danh mục</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
+<p 
+    @*@Html.ActionLink("Create New", "Create")*@
 </p>
-<table class="table">
+<a class="my-2 btn btn-primary" href="/PtthProducts/PtthCreate">Create New</a>
+<table class="table table-bordered">
     <tr>
         <th>
             @Html.DisplayNameFor(model => model.PtthProName)
@@ -45,7 +46,15 @@
             @Html.DisplayFor(modelItem => item.PtthCateId)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.PtthActive)
+            @*@Html.DisplayFor(modelItem => item.PtthActive)*@
+            @if (item.PtthActive == true)
+            {
+                <span style="color: lightgreen">Hoạt động</span>
+            }
+            else
+            {
+                <span style="color: red">Hem hoạt động</span>
+            }
         </td>
         <td>
             @Html.ActionLink("Edit", "PtthEdit", new { id=item.Ptthid2210900030 }) |

@@ -7,7 +7,7 @@
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
 </head>
-<body>
+<body >
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
@@ -23,7 +23,9 @@
                     <li>@Html.ActionLink("Home", "PtthIndex", "PtthHome")</li>
                     <li>@Html.ActionLink("About", "PtthAbout", "PtthHome")</li>
                     <li>@Html.ActionLink("Contact", "PtthContact", "PtthHome")</li>
+
                     <li>@Html.ActionLink("Category", "PtthIndex", "PtthCategories")</li>
+                    <li>@Html.ActionLink("Product", "PtthIndex", "PtthProducts")</li>
                 </ul>
             </div>
         </div>
