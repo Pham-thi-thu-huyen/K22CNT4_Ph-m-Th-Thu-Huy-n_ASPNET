@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PhamThiThuHuyen_2210900030ModelStoreContainer" CdmEntityContainer="PhamThiThuHuyen_2210900030Entities">
+    <EntitySetMapping Name="Ptth_MaSach">
+      <EntityTypeMapping TypeName="PhamThiThuHuyen_2210900030Model.Ptth_MaSach">
+        <MappingFragment StoreEntitySet="Ptth_MaSach">
+          <ScalarProperty Name="Ptth_MaSach1" ColumnName="Ptth_MaSach" />
+          <ScalarProperty Name="Ptth_TenSach" ColumnName="Ptth_TenSach" />
+          <ScalarProperty Name="Ptth_Sotrang" ColumnName="Ptth_Sotrang" />
+          <ScalarProperty Name="Ptth_NamXB" ColumnName="Ptth_NamXB" />
+          <ScalarProperty Name="Ptth_MaTG" ColumnName="Ptth_MaTG" />
+          <ScalarProperty Name="Ptth_TrangThai" ColumnName="Ptth_TrangThai" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ptth_MaTG">
+      <EntityTypeMapping TypeName="PhamThiThuHuyen_2210900030Model.Ptth_MaTG">
+        <MappingFragment StoreEntitySet="Ptth_MaTG">
+          <ScalarProperty Name="Ptth_MaTG1" ColumnName="Ptth_MaTG" />
+          <ScalarProperty Name="Ptth_TenTG" ColumnName="Ptth_TenTG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

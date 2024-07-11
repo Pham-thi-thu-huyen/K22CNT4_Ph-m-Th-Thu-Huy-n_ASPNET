@@ -1,0 +1,27 @@
+﻿@model PtthLesson12.Models.Ptth_MaTG
+
+@{
+    ViewBag.Title = "PtthDetails";
+    Layout = "~/Views/Shared/_PtthLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Ptth_MaTG</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Ptth_TenTG)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ptth_TenTG)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("PtthEdit", "PtthEdit", new { id = Model.Ptth_MaTG1 }) |
+    @Html.ActionLink("Back to List", "PtthIndex")
+</p>

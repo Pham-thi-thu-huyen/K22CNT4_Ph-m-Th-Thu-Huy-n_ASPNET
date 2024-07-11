@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="PhamThiThuHuyen_2210900030Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Ptth_MaSach">
+    <Key>
+      <PropertyRef Name="Ptth_MaSach" />
+    </Key>
+    <Property Name="Ptth_MaSach" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="Ptth_TenSach" Type="nvarchar" MaxLength="50" />
+    <Property Name="Ptth_Sotrang" Type="int" />
+    <Property Name="Ptth_NamXB" Type="int" />
+    <Property Name="Ptth_MaTG" Type="nchar" MaxLength="10" />
+    <Property Name="Ptth_TrangThai" Type="bit" />
+  </EntityType>
+  <EntityType Name="Ptth_MaTG">
+    <Key>
+      <PropertyRef Name="Ptth_MaTG" />
+    </Key>
+    <Property Name="Ptth_MaTG" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="Ptth_TenTG" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="PhamThiThuHuyen_2210900030ModelStoreContainer">
+    <EntitySet Name="Ptth_MaSach" EntityType="Self.Ptth_MaSach" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Ptth_MaTG" EntityType="Self.Ptth_MaTG" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

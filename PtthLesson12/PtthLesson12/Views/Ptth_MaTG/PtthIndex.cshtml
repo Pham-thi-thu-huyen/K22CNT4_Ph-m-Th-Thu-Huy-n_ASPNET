@@ -1,0 +1,35 @@
+﻿@model IEnumerable<PtthLesson12.Models.Ptth_MaTG>
+
+@{
+    ViewBag.Title = "Danh mục tác giả";
+    Layout = "~/Views/Shared/_PtthLayout.cshtml";
+}
+
+<h2>Danh mục tác giả</h2>
+
+<p>
+    @Html.ActionLink("Create New", "PtthCreate")
+</p>
+<table class="table table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Ptth_TenTG)
+        </th>
+
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ptth_TenTG)
+        </td>
+        <td>
+            @Html.ActionLink("PtthEdit", "PtthEdit", new { id=item.Ptth_MaTG1 }) |
+            @Html.ActionLink("PtthDetails", "PtthDetails", new { id=item.Ptth_MaTG1 }) |
+            @Html.ActionLink("PtthDelete", "PtthDelete", new { id=item.Ptth_MaTG1 })
+        </td>
+    </tr>
+}
+
+</table>

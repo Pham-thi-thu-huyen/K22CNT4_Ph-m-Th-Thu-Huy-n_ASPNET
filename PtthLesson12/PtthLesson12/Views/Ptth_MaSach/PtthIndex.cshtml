@@ -1,0 +1,58 @@
+﻿@model IEnumerable<PtthLesson12.Models.Ptth_MaSach>
+
+@{
+    ViewBag.Title = "PtthIndex";
+    Layout = "~/Views/Shared/_PtthLayout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Ptth_TenSach)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ptth_Sotrang)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ptth_NamXB)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ptth_MaTG)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ptth_TrangThai)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ptth_TenSach)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ptth_Sotrang)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ptth_NamXB)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ptth_MaTG)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ptth_TrangThai)
+        </td>
+        <td>
+            @Html.ActionLink("PtthEdit", "PtthEdit", new { id=item.Ptth_MaSach1 }) |
+            @Html.ActionLink("PtthDetails", "PtthDetails", new { id=item.Ptth_MaSach1 }) |
+            @Html.ActionLink("PtthDelete", "PtthDelete", new { id=item.Ptth_MaSach1 })
+        </td>
+    </tr>
+}
+
+</table>
